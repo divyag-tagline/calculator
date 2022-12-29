@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="/calculator.js"></script>
+    <title>Calculator</title>
+    <style>
+      .container {
+        text-align: center;
+        height: 304px;
+        width: 315px;
+        background-color: black;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        /* padding: 70px 0; */
+        text-align: center;
+      }
+
+      input {
+        height: 40px;
+        width: 300px;
+        border-radius: 10px;
+        font-size: larger;
+      }
+
+      td button {
+        height: 45px;
+        width: 48px;
+        /* padding: 0px; */
+        margin: 0px;
+        font-size: larger;
+        margin-right: 0%;
+        border-radius: 10px;
+      }
+
+      table {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      td {
+        height: 45px;
+        width: 48px;
+      }
+
+      button.ac {
+        width: 100px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <table>
+        <tr>
+          <td colspan="4">
+            <input
+              type="text"
+              name="screen"
+              id="screen"
+              onkeypress="return blockSpecialChar(event)"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><button value="1" onclick="display(1)">1</button></td>
+          <td><button value="2" onclick="display(2)">2</button></td>
+          <td><button value="3" onclick="display(3)">3</button></td>
+          <td><button value="+" onclick="display('+')">+</button></td>
+        </tr>
+        <tr>
+          <td><button value="4" onclick="display(4)">4</button></td>
+          <td><button value="5" onclick="display(5)">5</button></td>
+          <td><button value="6" onclick="display(6)">6</button></td>
+          <td><button value="-" onclick="display('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button value="7" onclick="display(7)">7</button></td>
+          <td><button value="8" onclick="display(8)">8</button></td>
+          <td><button value="9" onclick="display(9)">9</button></td>
+          <td>
+            <button value="*" onclick="display('*')">
+              <i class="fa-sharp fa-solid fa-xmark"></i>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td><button value="0" onclick="display(0)">0</button></td>
+          <td><button value="00" onclick="display(00)">00</button></td>
+          <td><button value="." onclick="display('.')">.</button></td>
+          <td><button value="/" onclick="display('/')">/</button></td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button class="ac" value="ac" onclick="textClear()">AC</button>
+          </td>
+          <td>
+            <button value="remove" onclick="lastclear()">
+              <i class="fa-sharp fa-solid fa-delete-left"></i>
+            </button>
+          </td>
+          <td><button value="enter">=</button></td>
+        </tr>
+      </table>
+    </div>
+    <!-- <script>
+      
+    </script> -->
+  </body>
+</html>
